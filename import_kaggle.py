@@ -1,10 +1,11 @@
 import json
 import zipfile
 import os
-appi_token = {"username":"fiorella698","key":"9866430e99171b5625aa9997fd0b1fe8"} ## contenido de archivo kaggle.json
+api_token ={"username":"fiorella698","key":"bb4ce8d42d51916b72cd35c9efa8a263"} ## contenido de archivo kaggle.json
+
 ##conectar a kaggle
-with open ("C:/Users/fiore/kaggle.json","w") as file:
-    json.dump(appi_token,file)
+with open ('C:/Users/fiore/.kaggle/kaggle.json','w') as file:
+    json.dump(api_token,file)
 
 location = "C:/Users/fiore/OneDrive/Escritorio/Proyecto_parcial/dataset"
 
@@ -29,4 +30,3 @@ for file in os.listdir():
     zip_ref.extractall() ##extraer contenido archivo .zip
     zip_ref.close() ##cierra el archivo
     
-
